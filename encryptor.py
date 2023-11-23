@@ -35,15 +35,14 @@ def generate_keys():
     while gcd(e, phi) != 1:
         e = random.randint(2, phi)
     d = mod_inverse(e, phi)
-    public_key = (e, n)
-    private_key = (d, n)
+    public_key = e, n
+    private_key = d, n
     return public_key, private_key
 
 public_key, private_key = generate_keys()
-print("Public Key (e, n):", public_key)
-print("Private Key (d, n):", private_key)
-
+pk = str(private_key).replace('(','').replace(')','')
 message = input("Enter the text to encrypt: ")
-encrypted_message = rsa_encrypt(message, public_key)
+encrypted_message = str(rsa_encrypt(message, public_key)).replace('[',', ').replace(']','')
+em = pk + encrypted_message
 
-print("Encrypted message:", encrypted_message)
+print("Encrypted message:", em)
