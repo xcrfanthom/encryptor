@@ -1,6 +1,6 @@
-# Encoder and decoder
+# RSA Encryption and Decryption
 
-This is a simple encoder and a decoder written in python to show an understanding of python as a demonstration. 
-It will also be saved in this repository for combining it with other potential projects that I might have in the future. 
-All of this code is free for personal use. Libraries that are not in the core of python were intentionally not used since it poses a greater challenge. 
+The RSA encryption code generates public and private keys, encrypts user-provided text using the public key, and displays the encrypted message along with the keys.
+On the other hand, the decryption code prompts the user to input a ciphertext (a list of integers) and the corresponding private key components (d and n) to decrypt the message.
+
 Happy coding!
